@@ -24,6 +24,40 @@ int main(void)
     printf("Factors: passed\n");
 }
 
+float average(int x[], int c)
+{
+    int k = 0;
+    for (int i = 0; i < c; i++)
+    {
+        k += x[i];
+    }
+    return k/c;
+}
+
+int factors(int n, int ret[])
+{
+    int j = 0;
+	while (n%2 == 0)
+	{
+		printf("%d ", 2);
+		ret[j] = 2;
+		j++;
+		n = n/2;
+	}
+	
+	for (int i = 3; i <= sqrt(n); i = i+2)
+	{
+		while (n%i == 0)
+		{
+			printf("%d ", i);
+			ret[j] = i;
+		    	j++;
+			n = n/i;
+		}
+	}
+    return ret[];
+}
+
 int max(int x[], int c) 
 {
     int maximum = x[0];
@@ -46,7 +80,11 @@ int min(int x[], int c)
 
 int mode(int z[], int c) 
 {
-    int countArray[c], modeCount = 0, modeNumber, i = 0, j = 0;
+    int countArray[c]; 
+    int modeCount = 0; 
+    int modeNumber; 
+    int i = 0; 
+    int j = 0;
 
     for(i=0; i < c; i++)
     {
@@ -72,38 +110,4 @@ int mode(int z[], int c)
     }
     if (modeCount > 1)
         return modenumber;
-}
-
-float average(int x[], int c)
-{
-    int k = 0;
-    for (int i = 0; i < c; i++)
-    {
-        k += x[i];
-    }
-    return k/c;
-}
-
-int factors(int n, int ret[])
-{
-    int j = 0;
-	while (n%2 == 0)
-	{
-		printf("%d ", 2);
-		r[j] = 2;
-		j++
-		n = n/2;
-	}
-	
-	for (int i = 3; i <= sqrt(n); i = i+2)
-	{
-		while (n%i == 0)
-		{
-			printf("%d ", i);
-			r[j] = i;
-		    j++
-			n = n/i;
-		}
-	}
-    return ret[];
 }
