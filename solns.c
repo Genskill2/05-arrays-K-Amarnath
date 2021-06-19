@@ -26,7 +26,7 @@ int main(void)
 
 int max(int x[], int c) 
 {
-    maximum = x[0];
+    int maximum = x[0];
     for (int i = 0; i < c; i++)
     {
         maximum = maximum > x[i] ? maximum : x[i];
@@ -36,7 +36,7 @@ int max(int x[], int c)
 
 int min(int x[], int c) 
 {
-    minimum = x[0];
+    int minimum = x[0];
     for (int i = 0; i < c; i++)
     {
         minimum = minimum < x[i] ? minimum : x[i];
