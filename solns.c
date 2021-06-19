@@ -39,21 +39,21 @@ int mode(int z[], int l)
    for(int i = p; i <= n ; i++)
    {
         int c = 0;
-        for ( int j=0; j<length; j++)
+        for ( int j=0; j<l; j++)
         {
             if(a[j]==i)
         {
             c++;
         }
         }       
-     counts[++d] = c;
+     count[++d] = c;
     }
     int b = 0,f = 0 ;
     for (int i=0 ; i<=d ; i++)
     {
-        if ( counts[i] > b )
+        if (count[i] > b )
         {
-            b = counts[i];
+            b = count[i];
             f = i + p;
         }  
    }
