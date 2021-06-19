@@ -34,6 +34,21 @@ int factors(int n, int ret[])
     return j + 1;
 }
 
+int isprime(int n)
+{
+	for (int i = 2; i<n; i++)
+	{
+        	if(n%i==0)
+		{
+       			return 0;
+                }
+    		else
+   		{
+     			return 1;
+     		}
+  	}
+}
+
 int max(int x[], int c) 
 {
     int maximum = x[0];
