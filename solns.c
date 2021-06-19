@@ -89,9 +89,9 @@ int factors(int n, int arr[])
                 n = n/i; 
                 count++;
             }
-            if (isprime(x))
+            if (isprime(n))
             {
-                arr[count] = x;
+                arr[count] = n;
             }
        }
     }
