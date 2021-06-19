@@ -20,7 +20,7 @@ int main(void)
     
     int ret[100] = {0};
     int count = factors(180, ret);
-    assert (count == sizeof(ret[])/sizeof(ret[0]);
+    assert (count == sizeof(ret[])/sizeof(ret[0]));
     assert (ret[0] == 2);
     assert (ret[1] == 2);
     assert (ret[2] == 3);
