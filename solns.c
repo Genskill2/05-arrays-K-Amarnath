@@ -41,7 +41,7 @@ int mode(int z[], int l)
         int c = 0;
         for ( int j=0; j<l; j++)
         {
-            if(a[j]==i)
+            if(z[j]==i)
         {
             c++;
         }
