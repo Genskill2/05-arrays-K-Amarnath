@@ -2,11 +2,11 @@
 #include <assert.h>
 #include <math.h>
 
+float average(int [], int);
+int factors(int, int []);
 int max(int [], int);
 int min(int [], int);
-float average(int [], int);
 int mode(int [], int);
-int factors(int, int []);
 
 int main(void) 
 {
