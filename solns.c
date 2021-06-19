@@ -14,25 +14,24 @@ float average(int x[], int c)
 int factors(int n, int ret[])
 {
     int j = 0;
-	while (n%2 == 0)
-	{
-		printf("%d ", 2);
-		ret[j] = 2;
-		j++;
-		n = n/2;
-	}
-	
-	for (int i = 3; i <= sqrt(n); i = i+2)
+	for (int i = 2; i < n; i = i++)
 	{
 		while (n%i == 0)
 		{
-			printf("%d ", i);
-			ret[j] = i;
-		    	j++;
-			n = n/i;
+			if isprime(i)
+			{
+				printf("%d ", i);
+				ret[j] = i;
+		    		j++;
+				n = n/i;
+			}
+			if isprime(n)
+			{
+				ret[j] = n;
+			}
 		}
 	}
-    return j;
+    return j + 1;
 }
 
 int max(int x[], int c) 
