@@ -55,7 +55,7 @@ int factors(int n, int ret[])
 			n = n/i;
 		}
 	}
-    return ret[];
+    return ret;
 }
 
 int max(int x[], int c) 
@@ -109,5 +109,5 @@ int mode(int z[], int c)
         }   
     }
     if (modeCount > 1)
-        return modenumber;
+        return modeNumber;
 }
