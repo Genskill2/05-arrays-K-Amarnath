@@ -18,14 +18,14 @@ int factors(int n, int ret[])
 	{
 		while (n%i == 0)
 		{
-			if isprime(i)
+			if (isprime(i))
 			{
 				printf("%d ", i);
 				ret[j] = i;
 		    		j++;
 				n = n/i;
 			}
-			if isprime(n)
+			if (isprime(n))
 			{
 				ret[j] = n;
 			}
