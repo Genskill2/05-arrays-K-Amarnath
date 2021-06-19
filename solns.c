@@ -11,44 +11,6 @@ float average(int x[], int c)
     return k/c;
 }
 
-int factors(int n, int ret[])
-{
-    int j = 0;
-	for (int i = 2; i < n; i = i++)
-	{
-		while (n%i == 0)
-		{
-			if (isprime(i))
-			{
-				printf("%d ", i);
-				ret[j] = i;
-		    		j++;
-				n = n/i;
-			}
-			if (isprime(n))
-			{
-				ret[j] = n;
-			}
-		}
-	}
-    return j + 1;
-}
-
-int isprime(int n)
-{
-	for (int i = 2; i<n; i++)
-	{
-        	if(n%i==0)
-		{
-       			return 0;
-                }
-    		else
-   		{
-     			return 1;
-     		}
-  	}
-}
-
 int max(int x[], int c) 
 {
     int maximum = x[0];
@@ -69,36 +31,69 @@ int min(int x[], int c)
     return minimum;
 }
 
-int mode(int z[], int c) 
+int mode(int z[], int l)
 {
-    int countArray[c]; 
-    int modeCount = 0; 
-    int modeNumber; 
-    int i = 0; 
-    int j = 0;
-
-    for(i=0; i < c; i++)
-    {
-        countArray[i] = 0;
-    }
-
-    for(i=0; i < c; i++)
-    {
-        for (j = 0; j < c; j++)
+   int n = max(z, l);
+   int p = min(z, l);
+   int count[100],  d=-1;
+   for(int i = p; i <= n ; i++)
+   {
+        int c = 0;
+        for ( int j=0; j<length; j++)
         {
-            if (z[i] == z[j])
-                countArray[i]++;
+            if(a[j]==i)
+        {
+            c++;
+        }
+        }       
+     counts[++d] = c;
+    }
+    int b = 0,f = 0 ;
+    for (int i=0 ; i<=d ; i++)
+    {
+        if ( counts[i] > b )
+        {
+            b = counts[i];
+            f = i + p;
+        }  
+   }
+   return f;
+}
+
+
+int isprime(int n)
+{
+    for (int i = 2; i<n; i++)
+    {
+        if(n%i==0)
+        {
+            return 0;
+        }
+        else
+        {
+            return 1;
         }
     }
+}
 
-    for (i=0; i < c; i++)
+int factors(int n, int arr[])
+{
+    int count=0;
+    for( int i = 2; i < n; i++)
     {
-        if (countArray[i] > modeCount)
+        while(n % i == 0)
         {
-            modeCount = countArray[i];
-            modeNumber = z[i];
-        }   
+            if(isprime(i))
+            {
+                arr[count] = i;
+                n = n/i; 
+                count++;
+            }
+            if (isprime(x))
+            {
+                arr[count] = x;
+            }
+       }
     }
-    if (modeCount > 1)
-        return modeNumber;
+    return count+1;
 }
